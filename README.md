@@ -1,6 +1,6 @@
-# Detecção de Rostos com OpenCV.
+# DETECÇÃO DE ROSTOS COM OpenCV.
 
-## Este projeto implementa a detecção de rostos em imagens e vídeos usando a biblioteca OpenCV e o classificador Haar Cascade.
+## Este projeto implementa a detecção de rostos em vídeos usando a biblioteca OpenCV e o classificador Haar Cascade.
 
 ## FERRAMENTAS UTILIZADAS:
 * Linguagem de programação Python 3.9.13.
