@@ -7,10 +7,10 @@
 import cv2
 
 
-# Variável de inicialização da webcam. 0 indica que a webcam padrão do computador.
+# Variável de inicialização da webcam. "0" indica que a webcam padrão do computador.
 video = cv2.VideoCapture(0)
 
-# Variável de carregamento do classificador pré-treinado 'Haar Cascade' para rosto.
+# Variável de carregamento do classificador pré-treinado 'Haar Cascade' para rostos.
 cascade_rosto = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 while True:
@@ -18,12 +18,12 @@ while True:
     # frame é um vetor de matriz de imagens capturado com base nos quadros por segundo.
     ret, frame = video.read()
 
-    # Loop de Captura de Vídeo. Se ret estivar disponível, o algoritmo prossegue.
+    # Loop de Captura de vídeo. Se ret estivar disponível, o algoritmo prossegue.
     # Mantém a captura ativa até que o usuário pressione a tecla 'q'.
     if not ret:
         break
 
-    # Converte a imagem para tons de cinza melhora o desempenho da detecção.   
+    # Converte a imagem para tons de cinza que melhora o desempenho da detecção.   
     escala_cinza = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # detectMultiScale(): Detecta rostos na imagem.
@@ -32,7 +32,7 @@ while True:
     # minSize=(30, 30): Define o tamanho mínimo do rosto a ser detectado.
     rostos = cascade_rosto.detectMultiScale(escala_cinza, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
-    # Desenhar retângulos ao redor dos rostos detectados.
+    # Desenha retângulo ao redor dos rostos detectados.
     for (x, y, w, h) in rostos:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
