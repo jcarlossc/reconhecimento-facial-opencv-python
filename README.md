@@ -6,14 +6,14 @@ Este projeto implementa a detecção de rostos em vídeos usando a biblioteca Op
 * Linguagem de programação Python 3.9.13.
 * Ambiente virtual VENV.
 * Git/GitHub
-* Visual studio code.
+* Visual studio Code.
 * Windows 10.
 
 ## REQUISITOS:
-Certifique-se de ter os seguintes pacotes instalados antes de rodar o projeto:
 * Python 3.x
 * OpenCV
 * NumPy
+* Webcam
 
 ## MODO DE UTILIZAR:
 * Clonar repositório.
